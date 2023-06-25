@@ -20,18 +20,7 @@ class MainViewController: UIViewController {
     
     private let calendarView = CalendarView()
     
-    private let userLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Your name"
-        label.textColor = .black
-        label.font = .robotoMedium24()
-        label.textColor = .specialGray
-        label.adjustsFontSizeToFitWidth = true
-        label.numberOfLines = 0
-        label.minimumScaleFactor = 0.5
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private let userLabel = UILabel(text: "Your name", font: .robotoMedium24(), textColor: .specialGray)
     
     private lazy var addWorkoutButton: UIButton = {
         let btn = UIButton(type: .system)
@@ -57,6 +46,10 @@ class MainViewController: UIViewController {
     
     private let weatherView = WeatherView()
     
+    private let workoutTodayLabel = UILabel(text: "Workout today", font: .robotoMedium14(), textColor: .specialLightBrown)
+    
+    private let tableView = MainTableView()
+    
     override func viewDidLayoutSubviews() {
         userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
     }
@@ -68,8 +61,6 @@ class MainViewController: UIViewController {
         setConstraints()
     }
     
-   
-    
     private func setupViews() {
         view.backgroundColor = .specialBackground
         
@@ -78,6 +69,8 @@ class MainViewController: UIViewController {
         view.addSubview(userLabel)
         view.addSubview(addWorkoutButton)
         view.addSubview(weatherView)
+        view.addSubview(workoutTodayLabel)
+        view.addSubview(tableView)
     }
     
     @objc private func addWorkoutButtonTapped() {
@@ -103,7 +96,6 @@ extension MainViewController {
             userLabel.bottomAnchor.constraint(equalTo: calendarView.topAnchor, constant: -10),
             userLabel.leadingAnchor.constraint(equalTo: userPhotoImageView.trailingAnchor, constant: 5),
             userLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            userLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
             
             addWorkoutButton.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 5),
             addWorkoutButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
@@ -113,8 +105,15 @@ extension MainViewController {
             weatherView.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 5),
             weatherView.leadingAnchor.constraint(equalTo: addWorkoutButton.trailingAnchor, constant: 10),
             weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            weatherView.bottomAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor),
-            weatherView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.205)
+            weatherView.heightAnchor.constraint(equalToConstant: 80),
+            
+            workoutTodayLabel.topAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor, constant: 10),
+            workoutTodayLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            
+            tableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor, constant: 0),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
         ])
     }
 }
