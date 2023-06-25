@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10286672A48474D00A8588A /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10286662A48474D00A8588A /* UILabel + Extensions.swift */; };
+		A10286692A484AAF00A8588A /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10286682A484AAF00A8588A /* MainTableView.swift */; };
+		A102866B2A484C6200A8588A /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102866A2A484C6200A8588A /* WorkoutTableViewCell.swift */; };
+		A102866D2A484E1700A8588A /* UIStackView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102866C2A484E1700A8588A /* UIStackView + Extensions.swift */; };
+		A10286722A48606C00A8588A /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10286712A48606C00A8588A /* StatisticViewController.swift */; };
 		A136479B2A3E1ACD0006FDD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136479A2A3E1ACD0006FDD5 /* AppDelegate.swift */; };
 		A136479D2A3E1ACD0006FDD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136479C2A3E1ACD0006FDD5 /* SceneDelegate.swift */; };
 		A136479F2A3E1ACD0006FDD5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A136479E2A3E1ACD0006FDD5 /* MainViewController.swift */; };
@@ -24,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A10286662A48474D00A8588A /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
+		A10286682A484AAF00A8588A /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		A102866A2A484C6200A8588A /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		A102866C2A484E1700A8588A /* UIStackView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extensions.swift"; sourceTree = "<group>"; };
+		A10286712A48606C00A8588A /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		A13647972A3E1ACD0006FDD5 /* fitness_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitness_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A136479A2A3E1ACD0006FDD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A136479C2A3E1ACD0006FDD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +63,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A102866E2A48602E00A8588A /* StatisticModule */ = {
+			isa = PBXGroup;
+			children = (
+				A10286702A48604700A8588A /* Controllers */,
+				A102866F2A48603E00A8588A /* Views */,
+			);
+			path = StatisticModule;
+			sourceTree = "<group>";
+		};
+		A102866F2A48603E00A8588A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A10286702A48604700A8588A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A10286712A48606C00A8588A /* StatisticViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		A136478E2A3E1ACD0006FDD5 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +106,7 @@
 		A13647992A3E1ACD0006FDD5 /* fitness_app */ = {
 			isa = PBXGroup;
 			children = (
+				A102866E2A48602E00A8588A /* StatisticModule */,
 				A13647AF2A3E1DE50006FDD5 /* MainModule */,
 				A13647AE2A3E1DAB0006FDD5 /* Application */,
 				A13647B72A3EFAC20006FDD5 /* Extensions */,
@@ -113,6 +148,7 @@
 				A13647B32A3E23CE0006FDD5 /* CalendarView.swift */,
 				A13647B52A3E2E000006FDD5 /* WeatherView.swift */,
 				A13647C42A3F07510006FDD5 /* CalendarCollectionView.swift */,
+				A10286682A484AAF00A8588A /* MainTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +178,8 @@
 				A13647B92A3F02A10006FDD5 /* UIView + Extensions.swift */,
 				A13647C02A3F046A0006FDD5 /* UIFont + Extensions.swift */,
 				A13647C22A3F05070006FDD5 /* UIColor + Extensions.swift */,
+				A10286662A48474D00A8588A /* UILabel + Extensions.swift */,
+				A102866C2A484E1700A8588A /* UIStackView + Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -159,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				A13647C72A3F093B0006FDD5 /* CalendarCollectionViewCell.swift */,
+				A102866A2A484C6200A8588A /* WorkoutTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -235,12 +274,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A102866B2A484C6200A8588A /* WorkoutTableViewCell.swift in Sources */,
 				A13647B62A3E2E000006FDD5 /* WeatherView.swift in Sources */,
+				A10286672A48474D00A8588A /* UILabel + Extensions.swift in Sources */,
+				A10286722A48606C00A8588A /* StatisticViewController.swift in Sources */,
 				A136479F2A3E1ACD0006FDD5 /* MainViewController.swift in Sources */,
 				A136479B2A3E1ACD0006FDD5 /* AppDelegate.swift in Sources */,
 				A13647B42A3E23CE0006FDD5 /* CalendarView.swift in Sources */,
 				A13647C82A3F093B0006FDD5 /* CalendarCollectionViewCell.swift in Sources */,
+				A10286692A484AAF00A8588A /* MainTableView.swift in Sources */,
 				A13647C52A3F07510006FDD5 /* CalendarCollectionView.swift in Sources */,
+				A102866D2A484E1700A8588A /* UIStackView + Extensions.swift in Sources */,
 				A13647C12A3F046A0006FDD5 /* UIFont + Extensions.swift in Sources */,
 				A13647C32A3F05070006FDD5 /* UIColor + Extensions.swift in Sources */,
 				A13647BA2A3F02A10006FDD5 /* UIView + Extensions.swift in Sources */,
